@@ -3,7 +3,7 @@ const fastify = require("fastify")({
 });
 
 fastify.register(require("./config/db"));
-// fastify.register(require("./routes/userRoutes"));
+fastify.register(require("fastify-cors"));
 
 const routes = require("./routes/userRoutes");
 routes.forEach((route, index) => {
