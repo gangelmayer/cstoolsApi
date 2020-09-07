@@ -13,7 +13,7 @@ routes.forEach((route, index) => {
 const start = async () => {
   try {
     const PORT = 3001;
-    await fastify.listen(PORT);
+    await fastify.listen(PORT, "0.0.0.0");
   } catch (err) {
     fastify.log.error(err);
     process.exit(1);
