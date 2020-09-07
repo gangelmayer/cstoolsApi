@@ -4,6 +4,13 @@ const userController = require("../controllers/userController");
 const routes = [
   {
     method: "GET",
+    url: "/",
+    handler: () => {
+      return { success: true };
+    },
+  },
+  {
+    method: "GET",
     url: "/api/users",
     handler: userController.getAllUsers,
   },
